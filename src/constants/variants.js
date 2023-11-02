@@ -1,4 +1,4 @@
-export const staggerContainer = {
+ const staggerContainer = {
   initial: {},
   animate: {
     transition: {
@@ -8,7 +8,7 @@ export const staggerContainer = {
   },
 };
 
-export const staggerTextContainer = {
+ const staggerTextContainer = {
   initial: {},
   animate: {
     transition: {
@@ -18,7 +18,7 @@ export const staggerTextContainer = {
   },
 };
 
-export const staggerAccordionContainer = {
+ const staggerAccordionContainer = {
   initial: {},
   animate: {
     transition: {
@@ -29,7 +29,7 @@ export const staggerAccordionContainer = {
   },
 };
 
-export const staggerFooterContainer = {
+ const staggerFooterContainer = {
   initial: {},
   animate: {
     transition: {
@@ -39,7 +39,7 @@ export const staggerFooterContainer = {
   },
 };
 
-export const boyAnim = {
+ const boyAnim = {
   initial: { x: -150, opacity: 0 },
   animate: {
     x: 0,
@@ -48,7 +48,7 @@ export const boyAnim = {
   },
 };
 
-export const girlAnim = {
+ const girlAnim = {
   initial: { x: 900, opacity: 0 },
   animate: {
     x: 700,
@@ -57,7 +57,7 @@ export const girlAnim = {
   },
 };
 
-export const heroTruckAnim = {
+ const heroTruckAnim = {
   initial: { x: -700 },
   animate: {
     x: 0,
@@ -65,7 +65,7 @@ export const heroTruckAnim = {
   },
 };
 
-export const footerTruckAnim = {
+ const footerTruckAnim = {
   initial: { x: -700 },
   animate: {
     x: 0,
@@ -73,7 +73,7 @@ export const footerTruckAnim = {
   },
 };
 
-export const fadeInDown = {
+ const fadeInDown = {
   initial: {
     y: -70,
     opacity: 0,
@@ -85,7 +85,7 @@ export const fadeInDown = {
   },
 };
 
-export const fadeInUp = {
+ const fadeInUp = {
   initial: {
     y: 70,
     opacity: 0,
@@ -97,7 +97,7 @@ export const fadeInUp = {
   },
 };
 
-export const fadeInLeft = {
+ const fadeInLeft = {
   initial: {
     x: 70,
     opacity: 0,
@@ -109,7 +109,7 @@ export const fadeInLeft = {
   },
 };
 
-export const fadeInRight = {
+ const fadeInRight = {
   initial: {
     x: -70,
     opacity: 0,
@@ -120,3 +120,22 @@ export const fadeInRight = {
     transition: { type: 'tween', duration: 1.1 },
   },
 };
+
+
+const variants = {
+  staggerContainer,
+  staggerTextContainer,
+  staggerAccordionContainer,
+  staggerFooterContainer,
+  boyAnim,
+  girlAnim,
+  heroTruckAnim,
+  footerTruckAnim,
+  fadeInDown,
+  fadeInUp,
+  fadeInLeft,
+  fadeInRight,
+  
+}
+
+export default  variants

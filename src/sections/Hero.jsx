@@ -1,46 +1,72 @@
 import {Header} from ".";
-import Image from "next/image";
+import { data } from "../constants";
+import { motion } from "framer-motion";
+import { variants } from "../constants";
+import {CgArrowLongRight} from 'react-icons/cg'
 
 
-const Hero = ({heroData, headerData, navData}) => {
-  const {title, boyImg, girlImg, truckImg, btnText} = heroData
+const Hero = () => {
+  const {title, boyImg, girlImg, truckImg, btnText} = data.heroData
 
   return (
     <section className="bg-hero bg-no-repeat bg-left-top min-h-[800px] lg:min-h-[950x] lg:mb-80">
-      <div className="container mx-auto relative min-h-[800px] lg:min-h-[950px]">
+      <motion.div 
+      variants={variants.staggerContainer}
+      initial="initial"
+      animate="animate"
+      className="container mx-auto relative min-h-[800px] lg:min-h-[950px]">
         
-        <div>
-          <Header headerData={headerData} navData={navData} />
-        </div>
-        <h1 className="h1 max-w-[740px] text-white pt-[12rem] mb-[60px]">
-          {title}</h1>
-        <button className="btn">
-          {btnText}</button>
+        <motion.div
+        variants={variants.fadeInDown}
+        >
+          <Header />
+        </motion.div>
 
-        <div className="hidden lg:flex absolute bottom-0">
-          <Image 
+        <motion.h1
+        variants={variants.fadeInDown}
+        className="h1 max-w-[740px] text-white pt-[12rem] mb-[60px]">
+          {title}</motion.h1>
+
+        <motion.button
+        whileHover={{
+          scale: 1.05,
+        }}
+        variants={variants.fadeInDown}
+        className="btn">
+          {btnText}
+          <CgArrowLongRight className="text-[1.8rem]" />
+          </motion.button>
+
+        <motion.div 
+        variants={variants.girlAnim}
+        className="hidden lg:flex absolute bottom-0">
+          <img
           src={girlImg}
-          width={206}
-          height={495} />
-        </div>
+          className="w-[209px] h-[495px]"
+          alt='girl avatar' />
+        </motion.div>
 
-        <div className="hidden lg:flex absolute -bottom-[25%] -left-[30%]">
-          <Image
+        <motion.div 
+        variants={variants.heroTruckAnim}
+        className="hidden lg:flex absolute -bottom-[25%] -left-[30%]">
+          <img
           src={truckImg}
-          width={811}
-          height={395}
+         className="w-[811px] h-[395px]"
+          alt="truck avatar"
           />
-        </div>
+        </motion.div>
 
-        <div className="hidden lg:flex absolute right-[380px] bottom-0 z-10">
-          <Image 
+        <motion.div 
+        variants={variants.boyAnim}
+        className="hidden lg:flex absolute right-[380px] bottom-0 z-10">
+          <img
           src={boyImg}
-          width={206}
-          height={495}
+          className="w-[209px] h-[495px]"
+          alt="boy avatars"
           />
-        </div>
+        </motion.div>
 
-      </div>
+      </motion.div>
     </section>
   )
 };
