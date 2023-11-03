@@ -1,4 +1,4 @@
-import { About, Faq, Hero, How } from "./sections";
+import { About, Copyright, Faq, Footer, Hero, How, Testimonials } from "./sections";
 
 
 function App() {
@@ -8,6 +8,9 @@ function App() {
       <About />
       <How />
       <Faq />
+      <Testimonials />
+      <Footer />
+      <Copyright />
     </div>
   );
 }

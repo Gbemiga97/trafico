@@ -9,15 +9,15 @@ const headerData = {
   const navData= [
     { 
       name: "About",
-       href: "/" 
+       href: "about" 
       },
     { 
       name: "How to", 
-      href: "/" 
+      href: "how" 
     },
     { 
       name: "Faqs", 
-      href: "/" 
+      href: "faqs" 
     }
   ]
 
@@ -142,9 +142,9 @@ const headerData = {
     text: "We provide traffic management consultants so you get started quickly, contact us for a quote today!",
     logo: images.FooterLogo,
     links: [
-      { name: "about", "href": "/" },
-      { name: "how to", "href": "/" },
-      { name: "faqs", "href": "/" }
+      { name: "about", "href": "about" },
+      { name: "how to", "href": "how" },
+      { name: "faqs", "href": "faqs" }
     ],
     form: {
       labelName: "Name",

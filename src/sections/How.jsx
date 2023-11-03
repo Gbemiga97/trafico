@@ -6,7 +6,7 @@ const How = () => {
   const {title, subtitle, girlImg} = data.howData
 
   return (
-    <section className="mb-[60px] lg:mb-[160px]">
+    <section id="how" className="mb-[60px] lg:mb-[160px]">
       <div className="container mx-auto">
         <motion.div 
         variants={variants.staggerTextContainer}

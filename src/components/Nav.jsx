@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { data } from "../constants";
 
 const Nav = ({header}) => {
@@ -7,10 +8,12 @@ const Nav = ({header}) => {
         {
           data.navData.map(({name, href}, i) => (
             <li key={i}>
-              <a 
+              <Link
+              spy={true}
+              to={href}
               className={`${header ? 'text-primary' : 'text-white'}
               cursor-pointer hover:text-accent-hover transition`}
-              href={href}>{name}</a>
+              >{name}</Link>
             </li>
           ))
         }

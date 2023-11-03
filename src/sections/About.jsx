@@ -6,7 +6,7 @@ const About = () => {
   const {title, subtitle, text, boyImg} = data.aboutData
 
   return (
-    <section className="mb-[60px] lg:mb-[160px]">
+    <section id="about" className="mb-[60px] lg:mb-[160px]">
       <div className="container mx-auto">
         <motion.div 
         variants={variants.staggerTextContainer}

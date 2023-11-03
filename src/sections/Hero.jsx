@@ -9,7 +9,7 @@ const Hero = () => {
   const {title, boyImg, girlImg, truckImg, btnText} = data.heroData
 
   return (
-    <section className="bg-hero bg-no-repeat bg-left-top min-h-[800px] lg:min-h-[950x] lg:mb-80">
+    <section id="/" className="bg-hero bg-no-repeat bg-left-top min-h-[800px] lg:min-h-[950x] lg:mb-80">
       <motion.div 
       variants={variants.staggerContainer}
       initial="initial"

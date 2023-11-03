@@ -1,15 +1,19 @@
+import { Link } from "react-scroll";
 import { data } from "../constants";
 
-const NavMobile = () => {
+const NavMobile = ({setShowNav}) => {
   return (
     <nav className='bg-accent w-full p-4'>
       <ul className="flex flex-col gap-y-6">
         {
           data.navData.map(({name, href}, i) => (
-            <li key={i}>
-              <a 
+            <li
+            key={i}>
+              <Link
+               onClick={() => setShowNav(false)}
               className="text-white hover:text-accent"
-              href={href}>{name}</a>
+              spy={true}
+              to={href}>{name}</Link>
             </li>
           ))
         }

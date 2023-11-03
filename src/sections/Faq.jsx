@@ -7,7 +7,7 @@ const Faq = () => {
   const {title, pretitle, boyImg, accordions} = data.faqData
 
   return (
-    <section className="min-h-[1150px] lg:bg-faq bg-no-repeat bg-right-top
+    <section id="faqs" className="min-h-[1150px] lg:bg-faq bg-no-repeat bg-right-top
     lg:pt-40 lg:pb-24 mb-[60px] lg:mb-[160px]">
       <div className="container mx-auto">
 
@@ -50,7 +50,7 @@ const Faq = () => {
           once: false,
           amount: 0.4
         }}
-        className="grid lg:grid-cols-2 gap-x-[20px] gap-y-[10px] items-start">
+        className="grid lg:grid-cols-2 place-items-center lg:place-items-start gap-x-[20px] gap-y-[10px] ">
           {
             accordions.map(( accordion, i) => (
               <Accordion accordion={accordion} key={i} />
