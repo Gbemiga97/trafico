@@ -1,7 +1,9 @@
-import {HiMenu} from 'react-icons/hi'
+import {HiMenu,} from 'react-icons/hi'
 import { data } from '../constants';
 import { useEffect, useState } from 'react';
 import { Nav, NavMobile } from '../components';
+import {AiOutlineClose} from 'react-icons/ai'
+
 
 const Header = () => {
   const {logoImgV1, logoImgV2, btnText} = data.headerData
@@ -27,16 +29,24 @@ const Header = () => {
 
       <div className='hidden lg:flex gap-x-[96px]'>
         <Nav header={header} />
-        <button className='btn'>
+
+        <button
+        onClick={() => setShowNav(prev => !prev)}
+        className='btn'>
           {btnText}</button>
       </div>
 
-    <div className='lg:hidden cursor-pointe '>
-     <HiMenu className='text-4xl text-accent-hover' /> 
-    </div>
+    <button
+    onClick={() => setShowNav(prev => !prev)}
+     className='lg:hidden cursor-pointer text-4xl text-accent-hover'>
+     {
+      showNav ? <AiOutlineClose /> : <HiMenu /> 
+     }
+    </button>
 
     <div className={`${showNav ? 'max-h-[154px]' : 'max-h-0'}
-    lg:hidden absolute top-full mt-2 w-full left-0 `}>
+    lg:hidden absolute top-full mt-2 w-full left-0 rounded-md 
+    overflow-hidden shadow-2xl transition-all`}>
       <NavMobile />
     </div>
     </header>
