@@ -1,5 +1,4 @@
 import About from "./About";
-import Accordion from "./Accordion";
 import Copyright from "./Copyright";
 import Faq from "./Faq";
 import Footer from "./Footer";
@@ -12,7 +11,6 @@ import Testimonials from "./Testimonials";
 
 export {
     About,
-    Accordion,
     Copyright,
     Faq,
     Footer,

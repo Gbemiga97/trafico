@@ -13,7 +13,7 @@ const About = () => {
         initial='initial'
         whileInView={'animate'}
         viewport={{once: false, amount: 0.6}}
-        className="flex flex-col lg:flex-row gap-x-[20px] items-center ">
+        className="flex flex-col lg:flex-row gap-[20px] items-center ">
 
           <motion.div 
           variants={variants.fadeInDown}
@@ -35,7 +35,7 @@ const About = () => {
           variants={variants.fadeInUp}
           className="flex-1">
             <img 
-            className="w-[575px] h-[480px]"
+            className="lg:w-[575px] lg:h-[480px]"
             src={boyImg}
              alt="avatar" />
           </motion.div>

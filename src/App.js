@@ -1,4 +1,4 @@
-import { About, Hero } from "./sections";
+import { About, Faq, Hero, How } from "./sections";
 
 
 function App() {
@@ -6,6 +6,8 @@ function App() {
     <div className="overflow-hidden max-w-[1600px] mx-auto bg-page">
       <Hero />
       <About />
+      <How />
+      <Faq />
     </div>
   );
 }
